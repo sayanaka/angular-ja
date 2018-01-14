@@ -4,23 +4,22 @@
 
 You can download and install these npm packages with the [**npm client**](https://docs.npmjs.com/cli/install), which runs as a node.js application.
 
-The [**yarn client**](https://yarnpkg.com/en/) is a popular alternative for downloading and installing npm packages.
-The Angular CLI uses `yarn` by default to install npm packages when you create a new project.
+[**yarn**](https://yarnpkg.com/en/)は、npmパッケージをインストールするための一般的な方法です。
+Angular CLIは新しいプロジェクトを作成する際、`yarn`を用いてnpmパッケージをインストールしています。
 
 <div class="l-sub-section">
 
-Node.js and npm are essential to Angular development.
+Node.jsとnpmは、Angularの開発に不可欠です。
 
-[Get them now](https://docs.npmjs.com/getting-started/installing-node "Installing Node.js and updating npm")
-if they're not already installed on your machine.
+まだインストールされていない場合は、[こちら](https://docs.npmjs.com/getting-started/installing-node "Node.jsのインストールと npmのアップデート")から入手してください。
 
-**Verify that you are running node `v4.x.x` or higher and npm `3.x.x` or higher**
-by running the commands `node -v` and `npm -v` in a terminal/console window.
-Older versions produce errors.
+ターミナル/コンソールウィンドウで、コマンド`node -v` および` npm -v` を実行して、**Node.js `v4.x.x以上` かつ `npm 3.x.x以上`を実行していること**を確認します。古いバージョンではエラーが発生します。
 
+【TODO】なんか微妙
 Consider using [nvm](https://github.com/creationix/nvm) for managing multiple
 versions of node and npm. You may need [nvm](https://github.com/creationix/nvm) if
 you already have projects running on your machine that use other versions of node and npm.
+[nvm](https://github.com/creationix/nvm) を使用して、複数のバージョンのNode.jsとnpmを管理することを検討してください。他のバージョンのNode.jsとnpmを使用しているマシン上で既にプロジェクトを実行している場合は、nvmが必要になることがあります。
 
 </div>
 
