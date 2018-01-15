@@ -19,13 +19,13 @@ Node.jsとnpmは、Angularの開発に不可欠です。
 Consider using [nvm](https://github.com/creationix/nvm) for managing multiple
 versions of node and npm. You may need [nvm](https://github.com/creationix/nvm) if
 you already have projects running on your machine that use other versions of node and npm.
-[nvm](https://github.com/creationix/nvm) を使用して、複数のバージョンのNode.jsとnpmを管理することを検討してください。他のバージョンのNode.jsとnpmを使用しているマシン上で既にプロジェクトを実行している場合は、nvmが必要になることがあります。
+[nvm](https://github.com/creationix/nvm) を使用して、複数のバージョンのNode.jsとnpmを管理することを検討してください。他のバージョンのNode.jsとnpmを使用しているマシン上で、すでにプロジェクトを実行している場合はnvmが必要になることがあります。
 
 </div>
 
 ## _package.json_
 
-Both `npm` and `yarn` install packages identified in a [**package.json**](https://docs.npmjs.com/files/package.json) file.
+`npm`と`yarn`はともに、[**package.json**](https://docs.npmjs.com/files/package.json)に指定されているパッケージをインストールします。
 
 The CLI `ng new` command creates a default `package.json` file for your project.
 This `package.json` specifies _a starter set of packages_ that work well together and 
