@@ -13,13 +13,9 @@ Node.jsとnpmは、Angularの開発に不可欠です。
 
 まだインストールされていない場合は、[こちら](https://docs.npmjs.com/getting-started/installing-node "Node.jsのインストールと npmのアップデート")から入手してください。
 
-ターミナル/コンソールウィンドウで、コマンド`node -v` および` npm -v` を実行して、**Node.js `v4.x.x以上` かつ `npm 3.x.x以上`を実行していること**を確認します。古いバージョンではエラーが発生します。
+ターミナル/コンソールウィンドウで、コマンド`node -v` および` npm -v` を実行して、**Node.js `v4.x.x以上` かつ `npm 3.x.x以上`を実行していること**を確認します。これより古いバージョンではエラーが発生します。
 
-【TODO】なんか微妙
-Consider using [nvm](https://github.com/creationix/nvm) for managing multiple
-versions of node and npm. You may need [nvm](https://github.com/creationix/nvm) if
-you already have projects running on your machine that use other versions of node and npm.
-[nvm](https://github.com/creationix/nvm) を使用して、複数のバージョンのNode.jsとnpmを管理することを検討してください。他のバージョンのNode.jsとnpmを使用しているマシン上で、すでにプロジェクトを実行している場合はnvmが必要になることがあります。
+他のバージョンのNode.jsとnpmを使用しているプロジェクトが存在している場合は、[nvm](https://github.com/creationix/nvm) を用いて、複数バージョンのNode.jsとnpmを管理することを検討してください。
 
 </div>
 
@@ -27,22 +23,17 @@ you already have projects running on your machine that use other versions of nod
 
 `npm`と`yarn`はともに、[**package.json**](https://docs.npmjs.com/files/package.json)に指定されているパッケージをインストールします。
 
-The CLI `ng new` command creates a default `package.json` file for your project.
-This `package.json` specifies _a starter set of packages_ that work well together and 
-jointly support many common application scenarios.
+CLIの `ng new` コマンドは、デフォルトの `package.json` を作成します。この `package.json` には、さまざまなアプリケーションシナリオに対応できるように、_基本的なパッケージ_ が指定されています。
 
-You will add packages to `package.json` as your application evolves.
-You may even remove some.
+アプリケーションの必要性に応じて、パッケージを追加・削除することができます。
 
-This guide focuses on the most important packages in the starter set.
+このガイドでは、_基本的なパッケージ_ の中でも特に重要度が高いものに焦点を当てています。
 
-#### *dependencies* and *devDependencies*
+#### *dependencies* と *devDependencies*
 
-The `package.json` includes two sets of packages,
-[dependencies](guide/npm-packages#dependencies) and [devDependencies](guide/npm-packages#dev-dependencies).
+`package.json` には、[dependencies](guide/npm-packages#dependencies) と [devDependencies](guide/npm-packages#dev-dependencies) の２種類のパッケージ区分があります。
 
-The *dependencies* are essential to *running* the application.
-The *devDependencies* are only necessary to *develop* the application.
+*dependencies* は、*アプリケーションの実行* に不可欠です。*devDependencies* は、 *アプリケーションの開発時* のみ必要となります。
 
 {@a dependencies}
 
