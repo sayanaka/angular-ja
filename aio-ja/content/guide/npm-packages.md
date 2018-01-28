@@ -23,9 +23,9 @@ Node.jsとnpmは、Angularの開発に不可欠です。
 
 `npm`と`yarn`はともに、[**package.json**](https://docs.npmjs.com/files/package.json)に指定されているパッケージをインストールします。
 
-CLIの `ng new` コマンドは、デフォルトの `package.json` を作成します。この `package.json` には、さまざまなアプリケーションシナリオに対応できるように、_基本的なパッケージ_ が指定されています。
+CLIの `ng new` コマンドは、デフォルトの `package.json` を作成します。この `package.json` には、さまざまなアプリケーションに対応できるように、_基本的なパッケージ_ が指定されています。
 
-アプリケーションの必要性に応じて、パッケージを追加・削除することができます。
+また、アプリケーションの必要性に応じて、パッケージを追加・削除することができます。
 
 このガイドでは、_基本的なパッケージ_ の中でも特に重要度が高いものに焦点を当てています。
 
@@ -38,45 +38,41 @@ CLIの `ng new` コマンドは、デフォルトの `package.json` を作成し
 {@a dependencies}
 
 ## *Dependencies*
-The `dependencies` section of `package.json` contains:
+`package.json` の `dependencies` セクションには、次のものが含まれています:
 
-* **Angular packages**: Angular core and optional modules; their package names begin `@angular/`.
+* **Angular packages**: パッケージ名が `@angular/` から始まる、Angular のコアライブラリ及びオプションライブラリ
 
-* **Support packages**: 3rd party libraries that must be present for Angular apps to run.
+* **Support packages**: Angularアプリを実行するために必要な サードパーティー製ライブラリ
 
-* **Polyfill packages**: Polyfills plug gaps in a browser's JavaScript implementation.
+* **Polyfill packages**: ブラウザのJavaScript実装の差異を埋める Polyfillsライブラリ
 
 ### Angular Packages
 
-**@angular/animations**: Angular's animations library makes it easy to define and apply animation effects such as page and list transitions.
-Read about it in the [Animations guide](guide/animations).
+**@angular/animations**: Angularのアニメーションライブラリは、ページ遷移やリスト遷移などのアニメーション効果を簡単に定義・適用することができます。
+詳細は [Animations guide](guide/animations) を参照してください。
 
-**@angular/common**: The commonly needed services, pipes, and directives provided by the Angular team.
-The [`HttpClientModule`](guide/http) is also here, in the '@angular/common/http' subfolder.
+**@angular/common**: Angularチームが提供する service/pipe/directive。
+また、[`HttpClientModule`](guide/http) は、 '@ angular / common / http'内にあります。
 
-**@angular/core**: Critical runtime parts of the framework needed by every application.
-Includes all metadata decorators, `Component`, `Directive`,  dependency injection, and the component lifecycle hooks.
+**@angular/core**: Angularの重要なランタイム部。
+すべてのメタデータデコレータ・`Component`・`Directive`・依存関係注入・コンポーネントのライフサイクルフックが含まれています。
 
-**@angular/compiler**: Angular's *Template Compiler*.
-It understands templates and can convert them to code that makes the application run and render.
-Typically you don’t interact with the compiler directly; rather, you use it indirectly via `platform-browser-dynamic` when [JIT compiling](guide/aot-compiler) in the browser.
+**@angular/compiler**: Angularの *テンプレートコンパイラ*。
+テンプレートを理解し、アプリケーションを実行・レンダリングするコードに変換します。
+通常、コンパイラとは直接対話しません。ブラウザが [JITコンパイル](guide/aot-compiler) する際に、`platform-browser-dynamic`経由で間接的に使用します。
 
-**@angular/forms**: support for both [template-driven](guide/forms) and [reactive forms](guide/reactive-forms).
+**@angular/forms**: [template-driven](guide/forms) と [reactive forms](guide/reactive-forms) のサポート。
 
-**@angular/http**: Angular's old, soon-to-be-deprecated, HTTP client.
+**@angular/http**: 廃止予定のHTTPクライアント。
 
-**@angular/platform-browser**: Everything DOM and browser related, especially
-the pieces that help render into the DOM.
-This package also includes the `bootstrapStatic()` method
-for bootstrapping applications for production builds that pre-compile with [AOT](guide/aot-compiler).
+**@angular/platform-browser**: すべてのDOMとブラウザ、特にDOMへのレンダリングを担う。
+このパッケージには、[AOT](guide/aot-compiler) で事前コンパイルするプロダクションビルド用のアプリケーションをブートストラップするための`bootstrapStatic()`メソッドも含まれています。
 
-**@angular/platform-browser-dynamic**: Includes [Providers](api/core/Provider)
-and methods to compile and run the app on the client 
-using the [JIT compiler](guide/aot-compiler).
+**@angular/platform-browser-dynamic**: [JITコンパイラ](guide/aot-compiler) を使用してクライアント上でアプリケーションをコンパイル・実行する [Providers](api/core/Provider) とメソッドを含みます。
 
-**@angular/router**: The [router module](/guide/router) navigates among your app pages when the browser URL changes.
+**@angular/router**: URLが変更されると、[ルータモジュール](/guide/router) がアプリページを遷移させます。
 
-**@angular/upgrade**: Set of utilities for upgrading AngularJS applications to Angular.
+**@angular/upgrade**: AngularJSのアプリケーションをAngularアプリケーションにアップグレードするためのユーティリティ。
 
 {@a polyfills}
 
