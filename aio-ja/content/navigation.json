@@ -74,64 +74,76 @@
     {
       "url": "guide/quickstart",
       "title": "はじめに",
-      "tooltip": "Angularへのやさしい導入"
+      "tooltip": "Angularへのやさしい導入",
+      "translated": true
     },
 
     {
+      "url": "tutorial",
       "title": "チュートリアル",
       "tooltip": "Tour of Heroesチュートリアルでは、TypeScriptでAngularアプリケーションを作成する手順を説明します",
       "children": [
         {
           "url": "tutorial",
           "title": "1. イントロダクション",
-          "tooltip": "Part 1: Tour of Heroesチュートリアルの紹介"
+          "tooltip": "Part 1: Tour of Heroesチュートリアルの紹介",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt0",
           "title": "2. アプリケーションシェル",
-          "tooltip": "Part 2: アプリケーションシェルを作成します"
+          "tooltip": "Part 2: アプリケーションシェルを作成します",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt1",
           "title": "3. ヒーローエディター",
-          "tooltip": "Part 3: シンプルなヒーローエディターを組み立てます"
+          "tooltip": "Part 3: シンプルなヒーローエディターを組み立てます",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt2",
           "title": "4. リストの表示",
-          "tooltip": "Part 4: ヒーローのリストを備えたmaster/detailページを組み立てます"
+          "tooltip": "Part 4: ヒーローのリストを備えたmaster/detailページを組み立てます",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt3",
           "title": "5. Master/Detail コンポーネント",
-          "tooltip": "Part 5: master/detailビューを複数のコンポーネントに分割してリファクタリングします"
+          "tooltip": "Part 5: master/detailビューを複数のコンポーネントに分割してリファクタリングします",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt4",
           "title": "6. サービス",
-          "tooltip": "Part 6: ヒーローのデータを管理するための再利用可能なサービスを作ります"
+          "tooltip": "Part 6: ヒーローのデータを管理するための再利用可能なサービスを作ります",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt5",
           "title": "7. ルーティング",
-          "tooltip": "Part 7: Angularルーターを追加してビュー間を移動します"
+          "tooltip": "Part 7: Angularルーターを追加してビュー間を移動します",
+          "translated": true
         },
         {
           "url": "tutorial/toh-pt6",
           "title": "8. HTTP",
-          "tooltip": "Part 8: HTTPを使ってヒーローのデータを取得・保存します"
+          "tooltip": "Part 8: HTTPを使ってヒーローのデータを取得・保存します",
+          "translated": true
         }
       ]
     },
 
     {
+      "url": "guide/architecture",
       "title": "基礎ガイド",
       "tooltip": "Angularの基礎",
       "children": [
         {
           "url": "guide/architecture",
-          "title": "Architecture",
-          "tooltip": "The basic building blocks of Angular applications."
+          "title": "アーキテクチャ",
+          "tooltip": "The basic building blocks of Angular applications.",
+          "translated": true
         },
         {
           "title": "Template & Data Binding",
@@ -184,24 +196,27 @@
             },
             {
               "url": "guide/animations",
-              "title": "Animations",
-              "tooltip": "A guide to Angular's animation system."
+              "title": "アニメーション",
+              "tooltip": "Angularのアニメーションシステムについて",
+              "translated": true
             }
           ]
         },
         {
-          "title": "Forms",
-          "tooltip": "Angular Forms",
+          "title": "フォーム",
+          "tooltip": "Angularのフォーム",
           "children": [
             {
               "url": "guide/user-input",
-              "title": "User Input",
-              "tooltip": "User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models."
+              "title": "ユーザー入力",
+              "tooltip": "ユーザー入力はDOMイベントを発火します。イベントバインディングを使用してこれらのイベントをリッスンし、更新された値をコンポーネントとモデルに戻します。",
+              "translated": true
             },
             {
               "url": "guide/forms",
-              "title": "Template-driven Forms",
-              "tooltip": "A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors."
+              "title": "テンプレート駆動フォーム",
+              "tooltip": "フォームは、密接で効果的で説得力のあるデータ入力体験を作り出します。 Angularフォームは、データバインドされたユーザーコントロールのセットを調整し、変更を追跡し、入力を検証し、エラーを表示します。",
+              "translated": true
             },
             {
               "url": "guide/form-validation",
@@ -220,26 +235,75 @@
             }
           ]
         },
-
         {
           "url": "guide/bootstrapping",
           "title": "Bootstrapping",
           "tooltip": "Tell Angular how to construct and bootstrap the app in the root \"AppModule\"."
         },
-
         {
+
           "title": "NgModules",
-          "tooltip": "Learn how to use NgModules to make your apps efficient.",
+          "tooltip": "NgModules.",
           "children": [
             {
-              "url": "guide/ngmodule",
-              "title": "NgModules",
-              "tooltip": "Define application modules with @NgModule."
+              "url": "guide/ngmodules",
+              "title": "NgModules Introduction",
+              "tooltip": "Use NgModules to make your apps efficient."
+            },
+            {
+              "url": "guide/ngmodule-vs-jsmodule",
+              "title": "JS Modules vs NgModules",
+              "tooltip": "Differentiate between JavaScript modules and NgModules."
+            },
+            {
+              "url": "guide/frequent-ngmodules",
+              "title": "Frequently Used NgModules",
+              "tooltip": "Introduction to the most frequently used NgModules."
+            },
+            {
+              "url": "guide/module-types",
+              "title": "Types of Feature Modules",
+              "tooltip": "Description of the different types of feature modules."
+            },
+            {
+              "url": "guide/entry-components",
+              "title": "Entry Components",
+              "tooltip": "All about entry components in Angular."
+            },
+            {
+              "url": "guide/feature-modules",
+              "title": "Feature Modules",
+              "tooltip": "Create feature modules to organize your code."
+            },
+            {
+              "url": "guide/providers",
+              "title": "Providers",
+              "tooltip": "Providers and NgModules."
+            },
+            {
+              "url": "guide/singleton-services",
+              "title": "Singleton Services",
+              "tooltip": "Creating singleton services."
+            },
+            {
+              "url": "guide/lazy-loading-ngmodules",
+              "title": "Lazy Loading Feature Modules",
+              "tooltip": "Lazy load modules to speed up your apps."
+            },
+            {
+              "url": "guide/sharing-ngmodules",
+              "title": "Sharing NgModules",
+              "tooltip": "Share NgModules to streamline your apps."
+            },
+            {
+              "url": "guide/ngmodule-api",
+              "title": "NgModule API",
+              "tooltip": "Understand the details of NgModules."
             },
             {
               "url": "guide/ngmodule-faq",
               "title": "NgModule FAQs",
-              "tooltip": "Answers to frequently asked questions about @NgModule."
+              "tooltip": "Answers to frequently asked questions about NgModules."
             }
         ]},
 
@@ -268,7 +332,8 @@
         {
           "url": "guide/http",
           "title": "HttpClient",
-          "tooltip": "リモートサーバーと通信するためにHTTPを使いましょう"
+          "tooltip": "リモートサーバーと通信するためにHTTPを使いましょう",
+          "translated": false
         },
         {
           "url": "guide/router",
@@ -283,7 +348,8 @@
         {
           "url": "guide/cheatsheet",
           "title": "チートシート",
-          "tooltip": "よく使われるAngularのコーディングテクニックへのガイド"
+          "tooltip": "よく使われるAngularのコーディングテクニックへのガイド",
+          "translated": true
         }
     ]},
 
@@ -356,27 +422,32 @@
             {
               "url": "guide/service-worker-intro",
               "title": "イントロダクション",
-              "tooltip": "AngularのService Worker実装は低速なネットワーク接続におけるユーザー体験を改善します。"
+              "tooltip": "AngularのService Worker実装は低速なネットワーク接続におけるユーザー体験を改善します。",
+              "translated": true
             },
             {
               "url": "guide/service-worker-getting-started",
               "title": "Service Workerを始める",
-              "tooltip": "CLIプロジェクトでService Workerを有効化し、ブラウザでの振る舞いを監視します。"
+              "tooltip": "CLIプロジェクトでService Workerを有効化し、ブラウザでの振る舞いを監視します。",
+              "translated": true
             },
             {
               "url": "guide/service-worker-communications",
               "title": "Service Workerとの通信",
-              "tooltip": "Angular Service Workerとやりとりするためのサービスについて。"
+              "tooltip": "Angular Service Workerとやりとりするためのサービスについて。",
+              "translated": true
             },
             {
               "url": "guide/service-worker-devops",
               "title": "プロダクションにおけるService Worker",
-              "tooltip": "Service Workerと共にアプリケーションを実行し、アプリケーションの更新を管理し、デバッグし、そして終了させます。"
+              "tooltip": "Service Workerと共にアプリケーションを実行し、アプリケーションの更新を管理し、デバッグし、そして終了させます。",
+              "translated": true
             },
             {
               "url": "guide/service-worker-config",
               "title": "Service Workerの設定",
-              "tooltip": "Service Workerのキャッシュの振る舞いを設定します。"
+              "tooltip": "Service Workerのキャッシュの振る舞いを設定します。",
+              "translated": true
             }
           ]
         },
@@ -415,7 +486,8 @@
         {
           "url": "guide/glossary",
           "title": "用語集",
-          "tooltip": "Angular の用語の中でももっとも重要なものに関する、簡潔な定義集です。"
+          "tooltip": "Angular の用語の中でももっとも重要なものに関する、簡潔な定義集です。",
+          "translated": true
         }
       ]
     },
