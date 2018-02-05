@@ -59,7 +59,7 @@ CLIの `ng new` コマンドは、デフォルトの `package.json` を作成し
 
 **@angular/compiler**: Angularの *テンプレートコンパイラ*。
 テンプレートを理解し、アプリケーションを実行・レンダリングするコードに変換します。
-通常、コンパイラとは直接対話しません。ブラウザが [JITコンパイル](guide/aot-compiler) する際に、`platform-browser-dynamic`経由で間接的に使用します。
+通常、開発者はコンパイラと直接対話しません。ブラウザが [JITコンパイル](guide/aot-compiler) する際に、`platform-browser-dynamic`経由で間接的に使用します。
 
 **@angular/forms**: [template-driven](guide/forms) と [reactive forms](guide/reactive-forms) のサポート。
 
@@ -78,14 +78,11 @@ CLIの `ng new` コマンドは、デフォルトの `package.json` を作成し
 
 ### Polyfill packages
 
-Many browsers lack native support for some features in the latest HTML standards,
-features that Angular requires.
-"[Polyfills](https://en.wikipedia.org/wiki/Polyfill)" can emulate the missing features.
-The [Browser Support](guide/browser-support) guide explains which browsers need polyfills and 
-how you can add them.
+多くのブラウザでは、Angularが必要としている最新のHTML標準機能がサポートされていません。
+"[Polyfills](https://en.wikipedia.org/wiki/Polyfill)" は、足りない機能を補います。
+[ブラウザサポートガイド](guide/browser-support) では、どのブラウザにpolyfillsが必要で、またどのように追加するか説明しています。
 
-The default `package.json` installs the **[core-js](https://github.com/zloirock/core-js)** package
-which polyfills missing features for several popular browser.
+デフォルトの`package.json`では、いくつかの一般的なブラウザで足りない機能を補う **[core-js](https://github.com/zloirock/core-js)** パッケージをインストールします。
 
 ### Support packages
 
