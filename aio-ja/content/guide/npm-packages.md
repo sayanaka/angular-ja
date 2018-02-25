@@ -1,8 +1,8 @@
-# Npm Packages
+# Npmパッケージ
 
- The [**Angular CLI**](https://cli.angular.io/), Angular applications, and Angular itself depend upon features and functionality provided by libraries that are available as [**npm**](https://docs.npmjs.com/) packages.
+ [**Angular CLI**](https://cli.angular.io/)・Angularアプリケーション・Angular本体は、[**npm**](https://docs.npmjs.com/)パッケージとして提供されているライブラリに依存しています。
 
-You can download and install these npm packages with the [**npm client**](https://docs.npmjs.com/cli/install), which runs as a node.js application.
+これらのnpmパッケージは、node.jsアプリケーションとして実行される[**npmクライアント**](https://docs.npmjs.com/cli/install)を使用してインストールできます。
 
 [**yarn**](https://yarnpkg.com/en/)は、npmパッケージをインストールするための一般的な方法です。
 Angular CLIは新しいプロジェクトを作成する際、`yarn`を用いてnpmパッケージをインストールしています。
@@ -38,15 +38,15 @@ CLIの `ng new` コマンドは、デフォルトの `package.json` を作成し
 {@a dependencies}
 
 ## *Dependencies*
-`package.json` の `dependencies` セクションには、次のものが含まれています:
+`package.json` の `dependencies区分`には、次のものが含まれています:
 
-* **Angular packages**: パッケージ名が `@angular/` から始まる、Angular のコアライブラリ及びオプションライブラリ
+* **Angularパッケージ**: パッケージ名が `@angular/` から始まる、Angular のコアライブラリ及びオプションライブラリ
 
-* **Support packages**: Angularアプリを実行するために必要な サードパーティー製ライブラリ
+* **Supportパッケージ**: Angularアプリを実行するために必要な サードパーティー製ライブラリ
 
-* **Polyfill packages**: ブラウザのJavaScript実装の差異を埋める Polyfillsライブラリ
+* **Polyfillパッケージ**: ブラウザのJavaScript実装の差異を埋める Polyfillsライブラリ
 
-### Angular Packages
+### Angularパッケージ
 
 **@angular/animations**: Angularのアニメーションライブラリは、ページ遷移やリスト遷移などのアニメーション効果を簡単に定義・適用することができます。
 詳細は [Animations guide](guide/animations) を参照してください。
@@ -76,7 +76,7 @@ CLIの `ng new` コマンドは、デフォルトの `package.json` を作成し
 
 {@a polyfills}
 
-### Polyfill packages
+### Polyfillパッケージ
 
 多くのブラウザでは、Angularが必要としている最新のHTML標準機能がサポートされていません。
 "[Polyfills](https://en.wikipedia.org/wiki/Polyfill)" は、足りない機能を補います。
@@ -84,73 +84,73 @@ CLIの `ng new` コマンドは、デフォルトの `package.json` を作成し
 
 デフォルトの`package.json`では、いくつかの一般的なブラウザで足りない機能を補う **[core-js](https://github.com/zloirock/core-js)** パッケージをインストールします。
 
-### Support packages
+### サポートパッケージ
 
-**[rxjs](https://github.com/benlesh/RxJS)**: Many Angular APIs return _observables_. RxJS is an implementation of the proposed [Observables specification](https://github.com/zenparsing/es-observable) currently before the
-[TC39](http://www.ecma-international.org/memento/TC39.htm) committee that determines standards for the JavaScript language.
+**[rxjs](https://github.com/benlesh/RxJS)**: 多くのAngular APIは_observables_を返します。
+RxJSは、JavaScriptの標準仕様を決定している[TC39](http://www.ecma-international.org/memento/TC39.htm)で現在提案されている[Observables仕様](https://github.com/zenparsing/es-observable)が実装されています。
 
 
-**[zone.js](https://github.com/angular/zone.js)**: Angular relies on zone.js to run Angular's change detection processes when native JavaScript operations raise events.  Zone.js is an implementation of a [specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the
-[TC39](http://www.ecma-international.org/memento/TC39.htm) committee that determines standards for the JavaScript language.
+**[zone.js](https://github.com/angular/zone.js)**: Angularは、ネイティブJavaScript操作でイベントが発生した場合、Angularの変更検出プロセスを実行するためにzone.jsに依存しています。
+Zone.jsは、JavaScriptの標準仕様を決定している[TC39](http://www.ecma-international.org/memento/TC39.htm)の[仕様](https://gist.github.com/mhevery/63fdcdf7c65886051d55)の実装です。
 
 
 {@a dev-dependencies}
 
 ## *DevDependencies*
 
-The packages listed in the *devDependencies* section of the `package.json` help you develop the application on your local machine.
+`package.json`の*devDependencies区分*にリストされているパッケージは、ローカルマシン上でのアプリケーション開発に役立ちます。
 
-You don't deploy them with the production application although there is no harm in doing so.
+プロダクションアプリケーションでは、これらをデプロイしないでください。
 
-**[@angular/cli](https://github.com/angular/angular-cli/)**: The Angular CLI tools.
-
-
-**[@angular/compiler-cli](https://github.com/angular/angular/blob/master/packages/compiler-cli/README.md)**: The Angular compiler, which is invoked by the Angular CLI's `build` and `serve` commands.
+**[@angular/cli](https://github.com/angular/angular-cli/)**: Angular CLIツール。
 
 
-**[@angular/language-service](https://github.com/angular/angular-cli/)**: The Angular language service analyzes component templates and provides type and error information that TypeScript-aware editors can use to improve the developer's experience.
-For example, see the [Angular language service extension for VS Code](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+**[@angular/compiler-cli](https://github.com/angular/angular/blob/master/packages/compiler-cli/README.md)**: Angularコンパイラ。Angular CLIの`buildコマンド`と`serveコマンド`で呼び出されます。
 
 
-**@types/... **: TypeScript definition files for 3rd party libraries such as Jasmine and node.
+**[@angular/language-service](https://github.com/angular/angular-cli/)**: Angular language serviceは、コンポーネントテンプレートを分析し、TypeScript対応エディタが開発者の経験を向上させるために使用できるタイプとエラーの情報を提供します。
+たとえば、[VS CodeのAngular language serviceプラグイン](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)を参照してください。
 
 
-**[codelyzer](https://www.npmjs.com/package/codelyzer)**: A linter for Angular apps whose rules conform to the Angular [style guide](guide/styleguide).
+**@types/... **: Jasmineやnodeなどのサードライブラリ用のTypeScript定義ファイル。
 
 
-**jasmine/... **: packages to support the [Jasmine](https://jasmine.github.io/) test library.
+**[codelyzer](https://www.npmjs.com/package/codelyzer)**: [Angularのスタイルガイド](guide/styleguide)に準拠しているリンター。
 
 
-**karma/... **: packages to support the [karma](https://www.npmjs.com/package/karma) test runner.
+**jasmine/... **: テストライブラリ([Jasmine](https://jasmine.github.io/))をサポートするパッケージ。
 
 
-**[protractor](https://www.npmjs.com/package/protractor)**: an end-to-end (e2e) framework for Angular apps. 
-Built on top of [WebDriverJS](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs).
+**karma/... **: テストランナー([karma](https://www.npmjs.com/package/karma))をサポートするパッケージ。
 
 
-**[ts-node](https://www.npmjs.com/package/ts-node)**: TypeScript execution environment and REPL for node.
+**[protractor](https://www.npmjs.com/package/protractor)**: Angularアプリケーションのエンドツーエンド（e2e）フレームワーク。 
+[WebDriverJS](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs)の上に構築されています。
 
 
-**[tslint](https://www.npmjs.com/package/tslint)**: a static analysis tool that checks TypeScript code for readability, maintainability, and functionality errors.
+**[ts-node](https://www.npmjs.com/package/ts-node)**: nodeのためのTypeScript実行環境とREPL。
+
+
+**[tslint](https://www.npmjs.com/package/tslint)**: TypeScriptコードの可読性/保守性/機能性のエラーをチェックする静的解析ツールです。
 
 
 **[typescript](https://www.npmjs.com/package/typescript)**:
-the TypeScript language server, including the *tsc* TypeScript compiler.
+*tsc*（TypeScriptコンパイラ）を含む、TypeScript言語サーバー。
 
 
-## So many packages! So many files!
+## とても多くのパッケージやファイルがありますね！
 
-The default `package.json` installs more packages than you'll need for your project.
+デフォルトの`package.json`では、プロジェクトに必要なパッケージよりも多くのパッケージがインストールされます。
 
-A given package may contain tens, hundreds, even thousands of files,
-all of them in your local machine's `node_modules` directory.
-The sheer volume of files is intimidating, 
+特定のパッケージには、数十、数百、さらには数千のファイルが含まれ、
+それらはすべてローカルマシンの`node_modulesディレクトリ`にあります。
+膨大な量のファイルは威圧的ですが・・・
 
-You can remove packages that you don't need but how can you be sure that you won't need it?
-As a practical matter, it's better to install a package you don't need than worry about it.
-Extra packages and package files on your local development machine are harmless.
+不必要なパッケージは削除することができますが、それをどうやって判断すればいいでしょう？
+実際にはそれを心配するよりも、不必要なパッケージをそのままにしておく方がよいでしょう。
+ローカルマシン上の余分なパッケージとパッケージファイルは無害です。
 
-By default the Angular CLI build process bundles into a single file just the few "vendor" library files that your application actually needs.
-The browser downloads this bundle, not the original package files.
+Angular CLIビルドプロセスは、アプリケーションに実際に必要な少数の "ベンダー" ライブラリファイルだけを1つのファイルにバンドルします。
+ブラウザは、元のパッケージファイルではなく、このバンドルをダウンロードします。
 
-See the [Deployment](guide/deployment) to learn more.
+詳細は、 [Deployment](guide/deployment) を参照してください。
