@@ -191,8 +191,9 @@
             },
             {
               "url": "guide/pipes",
-              "title": "Pipes",
-              "tooltip": "Pipes transform displayed values within a template."
+              "title": "パイプ",
+              "tooltip": "パイプは、表示される値をテンプレート内で変換します。",
+              "translated": true
             },
             {
               "url": "guide/animations",
@@ -237,8 +238,9 @@
         },
         {
           "url": "guide/bootstrapping",
-          "title": "Bootstrapping",
-          "tooltip": "Tell Angular how to construct and bootstrap the app in the root \"AppModule\"."
+          "title": "ブートストラップ",
+          "tooltip": "ルートの\"AppModule\"で、アプリケーションをどのように構築、起動するかをAngularに伝えましょう。",
+          "translated": true
         },
         {
 
@@ -470,8 +472,9 @@
         },
         {
           "url": "guide/universal",
-          "title": "Server-side Rendering",
-          "tooltip": "Render HTML server-side with Angular Universal."
+          "title": "サーバーサイドレンダリング",
+          "tooltip": "Angular Universalを使ってサーバーサイドでHTMLをレンダリングしましょう。",
+          "translated": true
         },
         {
           "url": "guide/visual-studio-2015",
