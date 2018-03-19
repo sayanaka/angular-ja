@@ -1,16 +1,16 @@
-# TypeScript Configuration
+# TypeScriptの設定
 
-TypeScript is a primary language for Angular application development.
-It is a superset of JavaScript with design-time support for type safety and tooling.
+TypeScriptは、Angularアプリケーション開発の主要言語です。
+これはJavaScriptのスーパーセットで、型安全性とツーリングのための設計時サポートを備えています。
 
-Browsers can't execute TypeScript directly. Typescript must be "transpiled" into JavaScript using the *tsc* compiler,
-which requires some configuration.
+ブラウザはTypeScriptを直接実行できません。Typescriptは、*tsc*コンパイラを使用してJavaScriptに "変換"する必要があります。
+そのためにはいくつか設定が必要です。
 
-This page covers some aspects of TypeScript configuration and the TypeScript environment
-that are important to Angular developers, including details about the following files:
+このページでは、Angular開発者にとって重要なTypeScriptの構成と環境について、
+主に次のファイルの詳細を説明します。
 
-* [tsconfig.json](guide/typescript-configuration#tsconfig)&mdash;TypeScript compiler configuration.
-* [typings](guide/typescript-configuration#typings)&mdash;TypesScript declaration files.
+* [tsconfig.json](guide/typescript-configuration#tsconfig)&mdash;TypeScriptコンパイラの設定。
+* [typings](guide/typescript-configuration#typings)&mdash;TypesScriptの宣言ファイル.
 
 
 {@a tsconfig}
@@ -18,31 +18,31 @@ that are important to Angular developers, including details about the following 
 
 
 ## *tsconfig.json*
-Typically, you add a TypeScript configuration file called `tsconfig.json` to your project to
-guide the compiler as it generates JavaScript files.
+通常、`tsconfig.json`というTypeScript構成ファイルをプロジェクトに追加し、
+コンパイラがJavaScriptファイルを生成する際のガイドを行います。
 
 <div class="l-sub-section">
 
 
 
-For details about `tsconfig.json`, see the official
-[TypeScript wiki](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+`tsconfig.json`の詳細については、公式の
+[TypeScript wiki](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html)を参照してください。
 
 </div>
 
 
 
-The [Setup](guide/setup) guide uses the following `tsconfig.json`:
+[セットアップガイド](guide/setup)では、次の`tsconfig.json`が使用されています。
 
 <code-example path="quickstart/src/tsconfig.1.json" title="tsconfig.json" linenums="false"></code-example>
 
-This file contains options and flags that are essential for Angular applications.
+このファイルには、Angularアプリケーションに不可欠なオプションとフラグが含まれています。
 
 
 {@a noImplicitAny}
 
 
-### *noImplicitAny* and *suppressImplicitAnyIndexErrors*
+### *noImplicitAny*と*suppressImplicitAnyIndexErrors*
 
 TypeScript developers disagree about whether the `noImplicitAny` flag should be `true` or `false`.
 There is no correct answer and you can change the flag later.
