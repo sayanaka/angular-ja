@@ -41,16 +41,16 @@ TypeScriptは、Angularアプリケーション開発の主要言語です。
 
 {@a noImplicitAny}
 
+<!-- ここのくだり、セクションごとあとで見直す。今はひとまず直訳っぽく。-->
+### *noImplicitAny* と *suppressImplicitAnyIndexErrors*
 
-### *noImplicitAny*と*suppressImplicitAnyIndexErrors*
+TypeScriptの開発者は、`noImplicitAny`フラグを`true`または`false`にするかどうかについては同意しません。
+この問題に正解はなく、あとでフラグを変更することができます。
+しかし、この選択は大規模プロジェクトにおいて大きな影響を与える可能性があるので、議論に値します。
 
-TypeScript developers disagree about whether the `noImplicitAny` flag should be `true` or `false`.
-There is no correct answer and you can change the flag later.
-But your choice now can make a difference in larger projects, so it merits discussion.
-
-When the `noImplicitAny` flag is `false` (the default), and if
-the compiler cannot infer the variable type based on how it's used,
-the compiler silently defaults the type to `any`. That's what is meant by *implicit `any`*.
+`noImplicitAny`フラグが`false`（デフォルト）の時、
+コンパイラが変数の型を自動推論できなかった場合は、
+型を`any`にデフォルト設定します。それは*暗黙の`any`*とみなされます。
 
 The documentation setup sets the `noImplicitAny` flag to `true`.
 When the `noImplicitAny` flag is `true` and the TypeScript compiler cannot infer
