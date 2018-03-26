@@ -48,21 +48,21 @@ TypeScriptの開発者は、`noImplicitAny`フラグを`true`または`false`に
 この問題に正解はなく、あとでフラグを変更することができます。
 しかし、この選択は大規模プロジェクトにおいて大きな影響を与える可能性があるので、議論に値します。
 
-`noImplicitAny`フラグが`false`（デフォルト）の時、
+`noImplicitAny`フラグが`false`（デフォルト）のとき、
 コンパイラが変数の型を自動推論できなかった場合は、
 型を`any`にデフォルト設定します。それは*暗黙の`any`*とみなされます。
 
-The documentation setup sets the `noImplicitAny` flag to `true`.
-When the `noImplicitAny` flag is `true` and the TypeScript compiler cannot infer
-the type, it still generates the JavaScript files, but it also **reports an error**.
-Many seasoned developers prefer this stricter setting because type checking catches more
-unintentional errors at compile time.
+ドキュメンテーションのセットアップでは、`noImplicitAny`フラグが`true`に設定されます。
+`noImplicitAny`フラグが`true`で、TypeScriptコンパイラが型を推論できない場合でも、
+JavaScriptファイルは生成されますが、**エラーも出力されます**。
+これはより厳格な型チェックとなりますが、コンパイル時に型チェックが意図していないエラーをキャッチできるので、
+多くのベテラン開発者が好む傾向にあります。
 
-You can set a variable's type to `any` even when the `noImplicitAny` flag is `true`.
+`noImplicitAny`フラグが`true`の場合でも、変数の型を`any`に設定することが可能です。
 
-When the `noImplicitAny` flag is `true`, you may get *implicit index errors* as well.
-Most developers feel that *this particular error* is more annoying than helpful.
-You can suppress them with the following additional flag:
+`noImplicitAny`フラグが`true`の場合、*暗黙のインデックスエラー*も発生する可能性があります。
+ほとんどの開発者は、*この特定のエラー*が役立つよりも迷惑であると感じています。
+次の追加フラグを使用してそれらを制御することができます：
 
 <code-example format=".">
   "suppressImplicitAnyIndexErrors":true
@@ -71,7 +71,7 @@ You can suppress them with the following additional flag:
 
 
 
-The documentation setup sets this flag to `true` as well.
+ドキュメントのセットアップでは、このフラグも`true`に設定されます。
 
 
 {@a typings}
@@ -79,10 +79,10 @@ The documentation setup sets this flag to `true` as well.
 
 
 ## TypeScript Typings
-Many JavaScript libraries, such as jQuery, the Jasmine testing library, and Angular,
-extend the JavaScript environment with features and syntax
-that the TypeScript compiler doesn't recognize natively.
-When the compiler doesn't recognize something, it throws an error.
+jQuery・Jasmineテストライブラリ・Angularなどの多くのJavaScriptライブラリは、
+TypeScriptコンパイラが認識できない機能と構文を用いて
+JavaScript環境を拡張しています。
+コンパイラが何かを認識できないと、エラーをスローします。
 
 Use [TypeScript type definition files](https://www.typescriptlang.org/docs/handbook/writing-declaration-files.html)&mdash;`d.ts files`&mdash;to tell the compiler about the libraries you load.
 
