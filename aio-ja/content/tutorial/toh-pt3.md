@@ -5,10 +5,10 @@
 1つのコンポーネントにすべての機能を保持しておくと、アプリケーションが成長するにつれて維持できなくなります。
 大きなコンポーネントを、特定のタスクやワークフローに焦点を当てた小さなサブコンポーネントに分割したいと思うでしょう。
 
-このページでは、ヒーローの詳細を別の再利用可能な `HeroDetailsComponent` に移動させることで、その道への第一歩を踏み出します。
+このページでは、ヒーローの詳細を別の再利用可能な `HeroDetailComponent` に移動させることで、その道への第一歩を踏み出します。
 
 `HeroesComponent` はヒーローのリストのみを表示します。
-`HeroDetailsComponent` は選択されたヒーローの詳細を表示します。
+`HeroDetailComponent` は選択されたヒーローの詳細を表示します。
 
 ## `HeroDetailComponent` を作成する
 
@@ -44,7 +44,7 @@ Angular CLIを使用して､ `hero-detail` という名前の新しいコンポ
 region="import-hero" title="src/app/hero-detail/hero-detail.component.ts (import Hero)">
 </code-example>
 
-`hero` プロパティは `@Input()` デコレータで注釈された[ _Input_ プロパティでなければなりません](guide/template-syntax#inputs-outputs "Input and Output properties")。
+`hero` プロパティは `@Input()` デコレーターで注釈された[ _Input_ プロパティでなければなりません](guide/template-syntax#inputs-outputs "Input and Output properties")。
 これは、_外部の_ `HeroesComponent` がこのようにバインドするためです。
 
 <code-example path="toh-pt3/src/app/heroes/heroes.component.html" region="hero-detail-binding">
@@ -55,7 +55,7 @@ region="import-hero" title="src/app/hero-detail/hero-detail.component.ts (import
 <code-example path="toh-pt3/src/app/hero-detail/hero-detail.component.ts" region="import-input" title="src/app/hero-detail/hero-detail.component.ts (import Input)" linenums="false">
 </code-example>
 
-`@Input()` デコレータが前に付いた `hero` プロパティを追加します。
+`@Input()` デコレーターが前に付いた `hero` プロパティを追加します。
 
 <code-example path="toh-pt3/src/app/hero-detail/hero-detail.component.ts" region="input-hero"  linenums="false">
 </code-example>

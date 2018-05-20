@@ -26,12 +26,24 @@ rules:
 
 # カタカナ語
 
+  - expected: オブザーバー
+    pattern: /オブザーバ(?!ー)/
+
   - expected: プロバイダー
     pattern:  /プロバイダ(?!ー)/
 
   - expected: サーバー
     pattern: /サーバ(?!ー)/
+
+  - expected: サブスクライバー
+    pattern: /サブスクライバ(?!ー)/
+
+  - expected: ルーター
+    pattern: /ルータ(?!ー)/
   
+  - expected: デコレーター
+    pattern: /デコレータ(?!ー)/
+
   - expected: ユーザー
     pattern: /ユーザ(?!ー)/
 

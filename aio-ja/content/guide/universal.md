@@ -12,7 +12,7 @@
 
 <div class="l-sub-section">
 
-[Node express](https://expressjs.com/)サーバーで動作する[サンプルコードの完成形をダウンロード](generated/zips/universal/universal.zip)してください。
+[Node.js® express](https://expressjs.com/)サーバーで動作する[サンプルコードの完成形をダウンロード](generated/zips/universal/universal.zip)してください。
 
 </div>
 
@@ -101,7 +101,7 @@ _Tour of Heroes_チュートリアルは、このガイドで説明しているU
 Universalを使用してビルドおよび配信をサポートするファイルを追加しましょう。
 
 この例では、Angular CLIが、アプリケーションのUniversalバージョンを[AOT（Ahead-of-Time）コンパイラー](guide/aot-compiler)でコンパイルして一纏めにします。
-node/express Webサーバーは、クライアントリクエストをUniversalによってレンダリングされたHTMLページへ変換します。
+Node.js® Express Webサーバーは、クライアントリクエストをUniversalによってレンダリングされたHTMLページへ変換します。
 
 次のファイルを生成しましょう:
 
@@ -295,7 +295,7 @@ _このエンジンの_ promiseコールバックは、レンダリングされ�
 
 webサーバーは _アプリケーションページのリクエスト_ と他の種類のリクエストを区別する必要があります。
 
-それは、ルートアドレス`/`に対するリクエストの傍受ほど簡単ではありません。ブラウザーは、`/dashboard`、`/heroes`、`/detail:12`といったアプリケーションルートの1つを要求できます。実際に、アプリケーションがサーバーによって _のみ_ レンダリングされた場合、クリックされた _すべての_ アプリケーションリンクはルータ用のナビゲーションURLとしてサーバーに到達します。
+それは、ルートアドレス`/`に対するリクエストの傍受ほど簡単ではありません。ブラウザーは、`/dashboard`、`/heroes`、`/detail:12`といったアプリケーションルートの1つを要求できます。実際に、アプリケーションがサーバーによって _のみ_ レンダリングされた場合、クリックされた _すべての_ アプリケーションリンクはルーター用のナビゲーションURLとしてサーバーに到達します。
 
 幸いアプリケーションルートのURLには、ファイル拡張子が存在しないといった共通点があります。
 
@@ -397,9 +397,9 @@ TypeScriptとWebpackの設定ファイルを作成したので、Universalアプ
 <code-example format="." language="ts">
 "scripts": {
     ...
-    "build:universal": "npm run build:client-and-server-bundles && npm run webpack:server",
-    "serve:universal": "node dist/server.js",
-    "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "serve:ssr": "node dist/server",
+    "build:client-and-server-bundles": "ng build --prod && ng run angular.io-example:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
     ...
 }
@@ -412,7 +412,7 @@ TypeScriptとWebpackの設定ファイルを作成したので、Universalアプ
 コマンドプロンプトで下記コマンドを入力しましょう。
 
 <code-example format="." language="bash">
-npm run build:universal
+npm run build:ssr
 </code-example>
 
 Angular CLIは、Universalアプリケーションを2つの異なるフォルダー、`browser`と`server`にコンパイルとバンドルを行います。
@@ -425,7 +425,7 @@ Webpackは`server.ts`ファイルをJavaScriptにトランスパイルします�
 アプリケーションをビルドしたら、サーバーを立ち上げましょう。
 
 <code-example format="." language="bash">
-npm run serve:universal
+npm run serve:ssr
 </code-example>
 
 コンソールウィンドウには、このように表示されるはずです。
