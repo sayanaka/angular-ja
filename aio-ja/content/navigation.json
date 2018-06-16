@@ -193,8 +193,9 @@
             },
             {
               "url": "guide/component-interaction",
-              "title": "Component Interaction",
-              "tooltip": "Share information between different directives and components."
+              "title": "コンポーネントの相互作用",
+              "tooltip": "異なるディレクティブとコンポーネント間で情報を共有しましょう。",
+              "translated": true
             },
             {
               "url": "guide/component-styles",
@@ -204,7 +205,8 @@
             {
               "url": "guide/elements",
               "title": "Angular Elements",
-              "tooltip": "Convert components to Custom Elements."
+              "tooltip": "コンポーネントをCustom Elementsに変換しましょう。",
+              "translated": true
             },
             {
               "url": "guide/dynamic-component-loader",
@@ -334,18 +336,21 @@
             },
             {
               "url": "guide/module-types",
-              "title": "Types of Feature Modules",
-              "tooltip": "Description of the different types of feature modules."
+              "title": "フィーチャーモジュールの種類",
+              "tooltip": "さまざまなタイプのフィーチャモジュールの説明。",
+              "translated": true
             },
             {
               "url": "guide/entry-components",
-              "title": "Entry Components",
-              "tooltip": "All about entry components in Angular."
+              "title": "エントリーコンポーネント",
+              "tooltip": "Angularのエントリコンポーネントに関するすべて。",
+              "translated": true
             },
             {
               "url": "guide/feature-modules",
-              "title": "Feature Modules",
-              "tooltip": "Create feature modules to organize your code."
+              "title": "フィーチャーモジュール",
+              "tooltip": "コードを整理するためのフィーチャーモジュールを作成します。",
+              "translated": true
             },
             {
               "url": "guide/providers",
