@@ -41,7 +41,7 @@ TypeScriptは、Angularアプリケーション開発の主要言語です。
 
 {@a noImplicitAny}
 
-<!-- ここのくだり、セクションごとあとで見直す。今はひとまず直訳っぽく。-->
+<!-- TODO:ここのくだり、セクションごとあとで見直す。今はひとまず直訳っぽく。-->
 ### *noImplicitAny* と *suppressImplicitAnyIndexErrors*
 
 TypeScriptの開発者は、`noImplicitAny`フラグを`true`または`false`にするかどうかについては同意しません。
@@ -115,26 +115,26 @@ TypeScriptは、`--target`の値に基づいて、必要なアンビエント宣
 
 これにより、`es5`をターゲットとしていても、`es6`でコーディングすることが可能です。
 
-### Installable typings files
+### 型定義ファイルのインストール
 多くのライブラリ（jQuery、Jasmine、Lodashなど）は、npmパッケージに`d.ts`ファイルが *含まれていません。*
 しかし幸いにも、著者やコミュニティの貢献者がこれらのライブラリ用の`d.ts`ファイルを作成し、
 公開しています。
 
 これらの型定義ファイルは、
 [`@types/*` スコープのパッケージ](http://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html)を使って`npm`でインストールすることができ、
-Typescript 2.0より自動的に認識されます。
+Typescript 2.0以降では自動認識されます。
 
 たとえば`jasmine`の型定義ファイルをインストールするには、`npm install @types/jasmine --save-dev`を実行します。
 
 
-QuickStart identifies two *typings*, or `d.ts`, files:
+QuickStartプロジェクトには、次の２つの*型定義ファイル*が含まれています。
 
-* [jasmine](http://jasmine.github.io/) typings for the Jasmine test framework.
+* [jasmine](http://jasmine.github.io/) Jasmineテストフレームワークの型定義
 
-* [node](https://www.npmjs.com/package/@types/node) for code that references objects in the *Node.js®* environment;
+* [node](https://www.npmjs.com/package/@types/node) *Node.js®*環境内のオブジェクトを参照するコード
 
 
-QuickStart doesn't require these typings but many of the samples do.
+QuickStartプロジェクトはこれらの型定義ファイルを必要としませんが、サンプルの多くは必要とします。
 
 
 {@a target}
