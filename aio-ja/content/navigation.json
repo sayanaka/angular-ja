@@ -66,12 +66,6 @@
     },
 
     {
-      "url": "guide/webpack",
-      "title": "Webpack: An Introduction",
-      "hidden": true
-    },
-
-    {
       "url": "guide/quickstart",
       "title": "はじめに",
       "tooltip": "Angularへのやさしい導入",
@@ -199,8 +193,9 @@
             },
             {
               "url": "guide/component-styles",
-              "title": "Component Styles",
-              "tooltip": "Add CSS styles that are specific to a component."
+              "title": "コンポーネントスタイル",
+              "tooltip": "コンポーネントに固有のCSSスタイルを追加します。",
+              "translated": true
             },
             {
               "url": "guide/elements",
@@ -265,23 +260,25 @@
               "url": "guide/reactive-forms",
               "title": "リアクティブフォーム",
               "tooltip": "FormBuilder、グループ、および配列を使用してリアクティブフォームを作成しましょう",
-              "translated": true
+              "translated": false
             },
             {
               "url": "guide/dynamic-form",
-              "title": "Dynamic forms",
-              "tooltip": "Render dynamic forms with FormGroup."
+              "title": "ダイナミックフォーム",
+              "tooltip": "FormGroupを使用して動的なフォームをレンダリングします。",
+              "translated": true
             }
           ]
         },
         {
-          "title": "Observables & RxJS",
-          "tooltip": "Observables & RxJS",
+          "title": "Observable と RxJS",
+          "tooltip": "Observable と RxJS",
           "children": [
             {
               "url": "guide/observables",
-              "title": "Observables",
-              "tooltip": ""
+              "title": "Observable",
+              "tooltip": "",
+              "translated": true
             },
             {
               "url": "guide/rx-library",
@@ -354,28 +351,33 @@
             },
             {
               "url": "guide/providers",
-              "title": "Providers",
-              "tooltip": "Providers and NgModules."
+              "title": "プロバイダー",
+              "tooltip": "プロバイダーとNgModule。",
+              "translated": true
             },
             {
               "url": "guide/singleton-services",
-              "title": "Singleton Services",
-              "tooltip": "Creating singleton services."
+              "title": "シングルトンサービス",
+              "tooltip": "シングルトンサービスの作成。",
+              "translated": true
             },
             {
               "url": "guide/lazy-loading-ngmodules",
-              "title": "Lazy Loading Feature Modules",
-              "tooltip": "Lazy load modules to speed up your apps."
+              "title": "フィーチャーモジュールの遅延ロード",
+              "tooltip": "遅延ロードモジュールを使用してアプリを高速化します。",
+              "translated": true
             },
             {
               "url": "guide/sharing-ngmodules",
-              "title": "Sharing NgModules",
-              "tooltip": "Share NgModules to streamline your apps."
+              "title": "モジュールの共有",
+              "tooltip": "NgModulesを共有してアプリを合理化しましょう。",
+              "translated": true
             },
             {
               "url": "guide/ngmodule-api",
               "title": "NgModule API",
-              "tooltip": "Understand the details of NgModules."
+              "tooltip": "NgModuleの詳細を理解しましょう。",
+              "translated": true
             },
             {
               "url": "guide/ngmodule-faq",
@@ -448,8 +450,9 @@
         },
         {
           "url": "guide/security",
-          "title": "Security",
-          "tooltip": "Developing for content security in Angular applications."
+          "title": "セキュリティ",
+          "tooltip": "Angularアプリケーションでのコンテンツセキュリティの開発",
+          "translated": true
         },
         {
           "title": "セットアップ & デプロイ",
@@ -559,6 +562,11 @@
               "url": "guide/upgrade",
               "title": "Upgrading Instructions",
               "tooltip": "Incrementally upgrade an AngularJS application to Angular."
+            },
+            {
+              "url": "guide/upgrade-performance",
+              "title": "Upgrading for Performance",
+              "tooltip": "Upgrade from AngularJS to Angular in a more flexible way."
             },
             {
               "url": "guide/ajs-quick-reference",

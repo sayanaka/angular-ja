@@ -12,7 +12,7 @@ HTMLテンプレートのコントロールをAngularコンポーネントのプ
   <img src="generated/images/guide/displaying-data/final.png" alt="Final UI">
 </figure>
 
-<div class="l-sub-section">
+<div class="alert is-helpful">
 
 
 
@@ -56,7 +56,7 @@ HTMLテンプレートのコントロールをAngularコンポーネントのプ
 
 
 
-<div class="l-sub-section">
+<div class="alert is-helpful">
 
 
 
@@ -74,7 +74,7 @@ Angularは自動的にコンポーネントから `title` と `myHero` プロパ
 Angularは、これらのプロパティが変更されると、表示を更新します。
 
 
-<div class="l-sub-section">
+<div class="alert is-helpful">
 
 
 
@@ -89,7 +89,7 @@ Angularは、これらのプロパティが変更されると、表示を更新�
 `AppComponent` クラスのインスタンスを作成するために、**new** を呼び出さないことに注目してください。
 Angularがインスタンスを作成しています。どのように？
 
-`@Component` デコレーターの CSSセレクタは、`<app-root>` という名前の要素を指定します。
+`@Component` デコレーターの CSSセレクターは、`<app-root>` という名前の要素を指定します。
 その要素は `index.html` ファイルの本文のプレースホルダです：
 
 
@@ -210,7 +210,7 @@ Angularはリスト内の各項目の `<li>` を複製し、 `hero`　変数を�
 Angularはその変数を二重中括弧内の補間のコンテキストとして使用します。
 
 
-<div class="l-sub-section">
+<div class="alert is-helpful">
 
 
 

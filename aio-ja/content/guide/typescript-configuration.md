@@ -21,7 +21,7 @@ TypeScriptは、Angularアプリケーション開発の主要言語です。
 通常、`tsconfig.json`というTypeScript構成ファイルをプロジェクトに追加し、
 コンパイラがJavaScriptファイルを生成する際のガイドを行います。
 
-<div class="l-sub-section">
+<div class="alert is-helpful">
 
 
 
@@ -132,7 +132,7 @@ QuickStart identifies two *typings*, or `d.ts`, files:
 * [jasmine](http://jasmine.github.io/) typings for the Jasmine test framework.
 
 * [node](https://www.npmjs.com/package/@types/node) for code that references objects in the *Node.js®* environment;
-you can view an example in the [webpack](guide/webpack) page.
+
 
 QuickStart doesn't require these typings but many of the samples do.
 

@@ -69,7 +69,7 @@ Angularが `HeroesComponent` へ注入する（[次に](#inject)行います）�
 これは _プロバイダ_ を登録することで行います。プロバイダーとは、サービスを作成または提供できるものです。この場合、`HeroService`クラスをインスタンス化してサービスを提供します。
 
 ここで、`HeroService`がこのサービスのプロバイダーとして登録されていることを確認する必要があります。
-あなたは _インジェクタ_ にこれを登録しています。インジェクタは、必要な場所でプロバイダーを選択して注入するためのオブジェクトです。
+あなたは _インジェクタ_ にこれを登録しています。インジェクターは、必要な場所でプロバイダーを選択して注入するためのオブジェクトです。
 
 デフォルトで、Angular CLIコマンド`ng generate service`は、プロバイダーのメタデータを`@Injectable`デコレーターに含めることによって、サービスの _ルートインジェクタ_ でプロバイダーを登録します。
 
@@ -84,17 +84,10 @@ Angularが `HeroesComponent` へ注入する（[次に](#inject)行います）�
 ルートレベルでサービスを提供すると、Angularは`HeroService`の単一の共有インスタンスを作成し、それを要求する任意のクラスに注入します。
 `@Injectable`メタデータでプロバイダーを登録すると、Angularはサービスが使用されなくなった場合にそれを削除することでアプリケーションを最適化することもできます。
 
-<div class="l-sub-section">
+<div class="alert is-helpful">
 
-必要な場合は、`HeroesComponent`、`AppComponent`、`AppModule`の各レベルでプロバイダーを登録できます。
-たとえば、`--module=app`を追加することで、
-モジュールレベルで自動的にサービスを提供するようCLIに指示することができます。
-
-<code-example language="sh" class="code-shell">
-  ng generate service hero --module=app
-</code-example>
-
-プロバイダーとインジェクタの詳細については、[依存性の注入ガイド](guide/dependency-injection)を参照してください。
+プロバイダーについての詳細は、[プロバイダーの章](guide/providers)を参照してください。
+インジェクターについての詳細は、[依存性の注入ガイド](guide/dependency-injection)を参照してください。
 
 </div>
 
@@ -244,7 +237,7 @@ title="src/app/hero.service.ts (Observable imports)" region="import-observable">
 修正前のコードでは、`heroes` プロパティにヒーローリストを代入していました。
 その代入は、まるでサーバーが即座に値を返すか、レスポンスを待機する間UIのレンダリングを中止したかのように _同期的_ です。
 
-`HeroService` が実際にサーバーへのレクエストを行う場合、修正前のコードは動作しません。
+`HeroService` が実際にサーバーへのリクエストを行う場合、修正前のコードは動作しません。
 
 新しいバージョンでは、`Observable` がヒーローの配列を出力するのを待っています。&mdash; 
 これは現在あるいは数分後に起こる可能性があります。
