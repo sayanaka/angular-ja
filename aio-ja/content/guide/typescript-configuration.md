@@ -78,7 +78,7 @@ JavaScriptファイルは生成されますが、**エラーも出力されま�
 
 
 
-## TypeScript Typings
+## TypeScriptの型定義
 jQuery・Jasmineテストライブラリ・Angularなどの多くのJavaScriptライブラリは、
 TypeScriptコンパイラが認識できない機能と構文を用いて
 JavaScript環境を拡張しています。
@@ -140,7 +140,7 @@ QuickStartプロジェクトはこれらの型定義ファイルを必要とし�
 {@a target}
 
 
-### *target*
+### *ターゲット指定*
 
 デフォルトのターゲットは`es5`ですが、es6互換ブラウザにのみアプリケーションをデプロイする場合は、ターゲットを`es6`に設定することができます。
 しかしこの場合、`IE`などの古いブラウザでは`Syntax Error`がスローされることに留意してください。
