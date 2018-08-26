@@ -84,26 +84,26 @@ TypeScriptコンパイラが認識できない機能と構文を用いて
 JavaScript環境を拡張しています。
 コンパイラが何かを認識できないと、エラーをスローします。
 
-Use [TypeScript type definition files](https://www.typescriptlang.org/docs/handbook/writing-declaration-files.html)&mdash;`d.ts files`&mdash;to tell the compiler about the libraries you load.
+TypeScriptの[型定義ファイル](https://www.typescriptlang.org/docs/handbook/writing-declaration-files.html)（d.tsファイル）を用いて、読み込んだライブラリについてコンパイラに指示します。
 
-TypeScript-aware editors leverage these same definition files to display type information about library features.
+TypeScript対応エディタは、これらの型定義ファイルを活用して、ライブラリ機能の型情報を表示します。
 
-Many libraries include definition files in their npm packages where both the TypeScript compiler and editors
-can find them. Angular is one such library.
-The `node_modules/@angular/core/` folder of any Angular application contains several `d.ts` files that describe parts of Angular.
+多くのライブラリには型定義ファイルが含まれており、TypeScriptコンパイラとエディタはそれらを見つけることができます。
+Angularはこのようなライブラリの1つです。
+Angularアプリケーションの `node_modules/@angular/core/`フォルダには、Angularのcore部分を記述するいくつかの `d.ts`ファイルが含まれています。
 
-**You need do nothing to get *typings* files for library packages that include `d.ts` files.
-Angular packages include them already.**
+**`d.ts`ファイルを含む *typings* ファイルは、すでにAngularパッケージに含まれていますので、
+追加作業を行う必要はありません。**
 
 ### lib.d.ts
 
-TypeScript includes a special declaration file called `lib.d.ts`. This file contains the ambient declarations for various common JavaScript constructs present in JavaScript runtimes and the DOM.
+TypeScriptには、 `lib.d.ts`という特別な型定義ファイルが含まれています。このファイルには、JavaScriptのランタイムとDOMに存在するさまざまな一般的なJavaScript構文のアンビエント宣言が含まれています。
 
-Based on the `--target`, TypeScript adds _additional_ ambient declarations
-like `Promise` if the target is `es6`.
+TypeScriptは、`--target`の値に基づいて、必要なアンビエント宣言を追加します。
+（たとえばターゲットが`es6`なら、`Promise`が追加されます。）
 
-Since the QuickStart is targeting `es5`, you can override the
-list of declaration files to be included:
+クイックスタートは次のように`es5`を対象としているので、
+含まれる宣言ファイルリストを上書きすることができます。
 
 
 <code-example format=".">
@@ -113,18 +113,18 @@ list of declaration files to be included:
 
 
 
-Thanks to that, you have all the `es6` typings even when targeting `es5`.
+これにより、`es5`をターゲットとしていても、`es6`でコーディングすることが可能です。
 
 ### Installable typings files
-Many libraries&mdash;jQuery, Jasmine, and Lodash among them&mdash;do *not* include `d.ts` files in their npm packages.
-Fortunately, either their authors or community contributors have created separate `d.ts` files for these libraries and
-published them in well-known locations.
+多くのライブラリ（jQuery、Jasmine、Lodashなど）は、npmパッケージに`d.ts`ファイルが *含まれていません。*
+しかし幸いにも、著者やコミュニティの貢献者がこれらのライブラリ用の`d.ts`ファイルを作成し、
+公開しています。
 
-You can install these typings via `npm` using the
-[`@types/*` scoped package](http://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html)
-and Typescript, starting at 2.0, automatically recognizes them.
+これらの型定義ファイルは、
+[`@types/*` スコープのパッケージ](http://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html)を使って`npm`でインストールすることができ、
+Typescript 2.0より自動的に認識されます。
 
-For instance, to install typings for `jasmine` you could do `npm install @types/jasmine --save-dev`.
+たとえば`jasmine`の型定義ファイルをインストールするには、`npm install @types/jasmine --save-dev`を実行します。
 
 
 QuickStart identifies two *typings*, or `d.ts`, files:
@@ -142,5 +142,5 @@ QuickStart doesn't require these typings but many of the samples do.
 
 ### *target*
 
-By default, the target is `es5`, you can configure the target to `es6` if you only want to deploy the application to
-es6 compatible browser. But if you configure the target to `es6` in some old browser such as `IE`, `Syntax Error` will be thrown.
+デフォルトのターゲットは`es5`ですが、es6互換ブラウザにのみアプリケーションをデプロイする場合は、ターゲットを`es6`に設定することができます。
+しかしこの場合、`IE`などの古いブラウザでは`Syntax Error`がスローされることに留意してください。
